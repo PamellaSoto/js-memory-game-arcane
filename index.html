@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcane | Memory Game</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body id="background">
+    <main>
+        <div id="header">
+            <h1>Arcane Memory Card</h1>
+            <p class="hidden" id="game__score">0/8</p>
+        </div>
+        <p class="game__description"><strong>Welcome to Arcane Memory Card!</strong><br>Find and match your favorite characters from the tv series <em>Arcane</em> as fast as you can!
+            <ol class="game__tutorial">
+                <li><strong>Flip Cards</strong> – Tap any two cards to turn them over.</li>
+                <li><strong>Find Matches</strong> – If they match, they stay face-up. If not, they flip back.</li>
+                <li><strong>Win the Game</strong> – Match all pairs before time runs out!</li>
+            </ol>
+        </p>
+        <div class="hidden" id="cards__grid"></div>
+        <button onclick="newGame()" id="gameStart" class="button"><span>Start new game</span></button>
+        <div class="hidden" id="winningScreen">
+            <p><strong>Congratulations! You won!</strong></p>
+            <p id="gameAttemps">Attemps made: </p>
+            <p id="gameTime">Match time: </p>
+        </div>
+        <button onclick="document.location.reload()" id="gameReset" class="hidden button"><span>Start new game</span></button>
+    </main>
+    <p id="project__credits">A fanmade game for learning purposes by <a href="https://github.com/PamellaSoto" target="_blank">@PamellaSoto</a> | <a href="" target="_blank">Github code</a></p>
+    <script src="./src/js/gameEngine.js" defer></script>
+    <script src="./src/js/backgroundSlide.js" defer></script>
+</body>
+</html>

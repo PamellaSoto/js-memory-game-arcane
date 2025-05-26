@@ -1,0 +1,152 @@
+@import url('../css/reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Arcane';
+    src: url('../fonts/arcaneNine.otf'), format('otf');
+}
+:root {
+    --white: #f0f1f4;
+    --soft-yellow: #dcd7b5;
+    --gold: #a67823;
+    --blue: #102350;
+    --dark-blue: #081635;
+    --text-gold-gradient: -webkit-linear-gradient(rgb(226, 174, 78), var(--gold));
+}
+.hidden { display: none !important; }
+.header--align {
+    width: 100%;
+    justify-content: space-between;
+}
+.margin-top { margin-top: 20px;}
+body, html { height: 100%;}
+#background { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main {
+    width: 700px;
+    margin: 4vw;
+    padding: 2em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background-color: #000000b4;
+    border-radius: 8px;
+    outline: 4px solid var(--gold);
+    border: 4px double var(--soft-yellow);
+}
+#header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+h1 {
+    background: var(--text-gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Arcane'; 
+}
+#game__score {
+    font-family: 'Raleway', sans-serif;
+    color: var(--white);
+    font-size: 1.6em;
+}
+.game__description, .game__tutorial, #winningScreen {
+    font-family: 'Raleway', sans-serif;
+    color: var(--white);
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+#cards__grid {
+    min-height: 600px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 16px;
+}
+.card {
+    position: relative;
+    cursor: pointer;
+    width: 130px;
+    height: 130px;
+    perspective: 1000px;
+}
+.card__content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.card__front, .card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 4px;
+    background-color: var(--blue);
+    outline: 4px solid var(--gold);
+    border: 4px double var(--soft-yellow);
+}
+.card__back { transform: rotateY(180deg); }
+
+.card.flipped .card__content { transform: rotateY(180deg); }
+
+.button {
+    position: relative;
+    width: 100%;
+    color: var(--gold);
+    outline: 4px solid var(--gold);
+    border: 4px double var(--soft-yellow);
+    padding: 4px;
+    font-family: 'Arcane'; 
+    cursor: pointer;
+    overflow: hidden;
+    background: transparent;
+}
+.button span {
+    position: relative;
+    display: inline-block;
+    background: var(--text-gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 150%; height: 100%;
+    background: linear-gradient(#081635 0%, #102350 50%, #081635 100%);
+    transform: translateX(-100%) skew(30deg);
+    transform-origin: bottom left;
+    transition: transform 0.5s ease-out;
+    z-index: 1;
+}
+.button:hover::before { transform: translateX(0) skew(30deg); }
+#gameStart { font-size: 3em; }
+#gameReset { font-size: 2em }
+
+#project__credits {
+    mix-blend-mode: difference;
+    font-family: 'Raleway', sans-serif;
+    color: var(--white);
+    font-size: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+a { color: var(--white); }
