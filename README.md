@@ -4,7 +4,7 @@
 
 A memory card matching game inspired by *Arcane (League of Legends)*. Match pairs of stunning artwork from Piltover and Zaun!
 
-🔗 **Play Now!**
+🔗 [**Play Now!**](https://pamellasoto.github.io/js-memory-game-arcane/)
 
 ---
 
@@ -15,7 +15,9 @@ A memory card matching game inspired by *Arcane (League of Legends)*. Match pair
 ---
 
 ## 🚧 Version 2.0 Roadmap  
-- [ ] **Improve responsiveness** for all screen sizes  
+- [ ] **Improve responsiveness** for all screen sizes
+- [ ] **Implement the Riot API** for official splash arts of the characters
+- [ ] **Add official voice lines** when matching the characters
 - [ ] **Add subtle animations** (e.g., hover effects, match celebrations)  
 - [ ] **Tweak card shuffling algorithm** for better randomness  
 - [ ] **Add sound effects** (card flips, background music)  
