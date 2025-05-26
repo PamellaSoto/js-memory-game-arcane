@@ -113,7 +113,7 @@ function winState() {
             gameTime.textContent += `${matchTimeResult} seconds.`;
             gameReset.classList.add('margin-top');
             gameReset.textContent = "Play again?";
-        }, 2000);
+        }, 1000);
 
     }
     
