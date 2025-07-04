@@ -1,6 +1,6 @@
 # Arcane Memory Card Game  
 
-![Game Preview](./demo.gif)
+![Game Preview](./demo.png)
 
 A memory card matching game inspired by *Arcane (League of Legends)*. Match pairs of stunning artwork from Piltover and Zaun!
 
